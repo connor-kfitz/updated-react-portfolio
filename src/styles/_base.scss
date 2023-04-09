@@ -1,0 +1,28 @@
+$text-hover-colour: #fd4766;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: #fff;
+    // background-color: #0f222d;
+    // background-color: #00041d;
+    background-color: #00060f;
+}
