@@ -1,12 +1,31 @@
 import * as Constants from '../constants/constants';
 import Logo from '../images/PortfolioLogo.png';
+import { useEffect, useState } from 'react';
 
 export default function Nav() {
 
-    console.log(window.location.href);
+    const [navBackground, setNavBackground] = useState('transparent')
+
+    useEffect(() => {
+        document.addEventListener('scroll', event => {
+            var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+            if (scrollTop < 100) {
+                if (scrollTop > 0 && scrollTop) {
+                    setNavBackground('#000726');
+                } else {
+                    setNavBackground('transparent');
+                }
+            }
+            
+        })
+    },[])
+
+    const navStyle = {
+        backgroundColor: navBackground
+    }
 
     return (
-        <nav className="nav">
+        <nav className="nav" style={navStyle}>
             <img className="nav__logo" src={Logo} alt="Logo"/>
             <ul className="nav__link-box">
                 {Constants.navLinks.map((link) => (

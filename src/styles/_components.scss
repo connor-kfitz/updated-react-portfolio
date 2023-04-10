@@ -4,7 +4,8 @@
     display: flex;
     width: 100%;
     background-color: transparent;
-    padding: 4rem 4rem;
+    padding: 3rem 4rem;
+    transition: .5s ease-in;
 
     &__logo {
         object-fit: contain;
@@ -61,6 +62,7 @@
 
 .header-content {
     padding-left: 20.75rem;
+    padding-right: 20.75rem;
     padding-top: 24vh;
     
     &__title-prefix {
@@ -81,3 +83,192 @@
         color: $text-hover-colour;
     }
 }
+
+.about-content {
+    // display: flex;
+
+    &__bitmoji {
+        border: solid #757575 .2rem;
+        border-radius: 1rem;
+        margin-right: 7rem;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        color: #757575;
+        margin-bottom: 3.5rem;
+    }
+
+    &__filter-cont {
+        display: flex;
+        list-style: none;
+        background-color: #000b34;
+        padding: 1.25rem 1.25rem;
+        border-radius: 50em;
+        margin-bottom: 4rem;
+    }
+
+    &__filter-item {
+        font-weight: 800;
+        padding: 1.5rem 3rem;
+        border-radius: 10rem;
+        transition: .2s ease-in;
+        cursor: pointer;
+    }
+}
+
+.front-end {
+    &__box {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 57.2rem;
+    }
+
+    &__skill {
+        flex: 0 0 48%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &:nth-child(odd) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__icon {
+        width: 3rem;
+        transition: .1s;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+}
+
+.back-end {
+    min-height: 18rem;
+
+    &__box {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 57.2rem;
+    }
+
+    &__skill {
+        flex: 0 0 48%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 2rem;
+        }
+
+        &:nth-child(odd) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__icon {
+        width: 3rem;
+        transition: .1s;
+    }
+
+}
+
+.experience {
+    min-height: 18rem;
+
+    &__box {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 57.2rem;
+    }
+
+    &__item {
+        flex: 0 0 100%;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin-bottom: .5rem;
+    }
+   
+    &__bold-text {
+        font-weight: 800;
+    }
+}
+
+.education {
+    min-height: 18rem;
+
+    &__box {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 57.2rem;
+    }
+
+    &__item {
+        flex: 0 0 100%;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin-bottom: .5rem;
+    }
+   
+    &__bold-text {
+        font-weight: 800;
+    }
+}
+
+.education {
+    min-height: 18rem;
+}
+
+@keyframes rotate{
+    from{
+        transform: translateY(-.5rem) rotate(0deg)
+        
+      }
+      to{
+        transform: translateY(-.5rem) rotate(360deg)
+      }
+  }
