@@ -1,4 +1,15 @@
-$text-hover-colour: #fd4766;
+$text-primary-colour: #fff;
+$text-secondary-colour: 'blue';
+// $text-tert
+$link-text-colour: #fd4766;
+$header-accent-colour: #75758F;
+
+$background-primary-colour: rgb(0, 6, 15);
+$background-secondary-colour: #010a18;
+
+// $background-secondary-colour: #000726;
+$background-tertiary-colour: '';
+
 
 * {
     margin: 0;
@@ -21,8 +32,6 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.2;
-    color: #fff;
-    // background-color: #0f222d;
-    // background-color: #00041d;
-    background-color: #00060f;
+    color: $text-primary-colour;
+    background-color: $background-secondary-colour;
 }

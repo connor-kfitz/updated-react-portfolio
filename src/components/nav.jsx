@@ -10,7 +10,7 @@ export default function Nav() {
         document.addEventListener('scroll', event => {
             var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
                 if (scrollTop > 0) {
-                    setNavBackground('#000726');
+                    setNavBackground('#00060f');
                 } else {
                     setNavBackground('transparent');
                 }

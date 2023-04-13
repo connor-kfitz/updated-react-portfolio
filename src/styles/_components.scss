@@ -23,14 +23,13 @@
     }
 
     &__item {
-        color: #fff;
 
         &:not(:last-child) {
             margin-right: 2rem;
         }
 
         &:hover {
-            color: $text-hover-colour;
+            color: $link-text-colour;
             text-decoration: underline;
             text-underline-offset: 1.5rem;
             text-decoration-thickness: .2rem;
@@ -69,7 +68,7 @@
     &__title-prefix {
         font-size: 3rem;
         font-weight: 500;
-        color: #75758F;
+        color: $header-accent-colour;
         margin-bottom: 2rem;
     }
 
@@ -81,7 +80,7 @@
     &__sub-title {
         font-size: 7.5rem;
         font-weight: 900;
-        color: $text-hover-colour;
+        color: $link-text-colour;
     }
 }
 
@@ -308,7 +307,7 @@
         width: 390px;
         height: 530px;
         padding: 0 1.5rem;
-        border-radius: 1.5rem;
+        border-radius: 1rem;
         cursor: pointer;
         background-size: cover;
         background-repeat: no-repeat;
@@ -358,7 +357,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        border-radius: 1.5rem;
+        border-radius: .89rem;
         background-image: linear-gradient(180deg,rgba(15,15,15,0),rgba(15,15,15,.75));
         transition: .75s;
         opacity: 1;
@@ -370,9 +369,9 @@
         left: 0;
         height: 100%;
         width: 100%;
-        border-radius: 1.5rem;
+        border-radius: .89rem;
         opacity: 0;
         transition: .75s;
-        background-image: linear-gradient(180deg,transparent,rgb(0, 7, 38));
+        background-image: linear-gradient(180deg,transparent,$background-primary-colour);
     }
 }
