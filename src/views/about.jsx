@@ -69,7 +69,14 @@ export default function About() {
                             <ul className="experience__box">
                                 {Constants.experience.map((item) => (
                                     <li className="experience__item">
-                                        <div className="experience__title"><span className='experience__bold-text'>{item.title}:</span> {item.company}</div>
+                                        <div className="experience__job-info-box">
+                                            <div className="experience__role">{item.title}</div>
+                                            <div className="experience__job-title-box">
+                                                <div className="experience__company">{item.company}</div>
+                                                <img className="experience__icon" src={item.icon}
+                                                     style={{filter: item.filter}}/>    
+                                            </div>
+                                        </div>
                                         <div className="experience__date">{item.date}</div>
                                     </li>
                                 ))}
@@ -80,8 +87,14 @@ export default function About() {
                         <section className="education">
                             <ul className="education__box">
                                 {Constants.education.map((item) => (
-                                    <li className="experience__item">
-                                        <div className="education__title"><span className='education__bold-text'>{item.degree}:</span> {item.school}</div>
+                                    <li className="education__item">
+                                        <div className="education__info-box">
+                                            <div className="education__title">{item.degree}</div>
+                                            <div className="education__school-info-box">
+                                                <div className="education__school">{item.school}</div>
+                                                <img className="education__icon" src={item.icon}/>
+                                            </div>
+                                        </div>
                                         <div className="education__date">{item.gradDate}</div>
                                     </li>
                                 ))}

@@ -26,7 +26,11 @@ import NodeColourIcon from '../images/icons/node-colour-icon.png';
 import GraphQLIcon from '../images/icons/graphql-icon.png';
 import GraphQLColourIcon from '../images/icons/graphql-colour-icon.svg';
 
+import ZoneTVIcon from '../images/icons/zoneTV-icon.png';
+import BAMIcon from '../images/icons/black-and-mcdonald-icon.png';
 
+import UOFGIcon from '../images/icons/uofg-icon.png';
+import UOFTIcon from '../images/icons/uoft-icon.png';
 
 export const navLinks = [
     {
@@ -170,24 +174,30 @@ export const experience = [
     {
         title: 'Junior Software Developer',
         company: 'Zone TV',
+        icon: ZoneTVIcon,
+        filter: 'none',
         date: 'Dec 2022 - Current'
     },
     {
         title: 'Project Coordinator',
         company: 'Black & McDonald',
+        icon: BAMIcon,
+        filter: 'invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%)',
         date: 'Jan 2021 - Mar 2022'
     }
 ]
 
 export const education = [
     {
-        degree: 'Boot Camp Certificate',
+        degree: 'Coding Boot Camp Certificate',
         school: 'University of Toronto',
+        icon: UOFTIcon,
         gradDate: 'May 2022 - Aug 2022'
     },
     {
         degree: 'Bachelor of Mechanical Engineering',
         school: 'University of Guelph',
+        icon: UOFGIcon,
         gradDate: 'Sept 2015 - April 2020'
     }
 

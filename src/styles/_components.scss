@@ -227,18 +227,35 @@
         max-width: 57.2rem;
     }
 
+    &__job-info-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__item {
         flex: 0 0 100%;
         font-size: 1.7rem;
         margin-bottom: 2rem;
     }
 
-    &__title {
-        margin-bottom: .5rem;
+    &__job-title-box {
+        display: flex;
+        align-items: center;
     }
-   
-    &__bold-text {
+
+    &__role {
+        margin-bottom: .5rem;
         font-weight: 800;
+    }
+
+    &__company {
+        margin-right: 1rem;
+    }
+
+    &__icon {
+        width: 3.5rem;
+        transition: .1s;
     }
 }
 
@@ -259,17 +276,31 @@
         margin-bottom: 2rem;
     }
 
+    &__info-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__title {
         margin-bottom: .5rem;
-    }
-   
-    &__bold-text {
         font-weight: 800;
     }
-}
 
-.education {
-    min-height: 18rem;
+    &__school-info-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__school {
+        margin-right: 1rem;
+    }
+
+    &__icon {
+        width: 3.5rem;
+        transition: .1s;
+        filter: invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%);
+    }
 }
 
 .projects-content {
