@@ -9,14 +9,11 @@ export default function Nav() {
     useEffect(() => {
         document.addEventListener('scroll', event => {
             var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-            if (scrollTop < 100) {
-                if (scrollTop > 0 && scrollTop) {
+                if (scrollTop > 0) {
                     setNavBackground('#000726');
                 } else {
                     setNavBackground('transparent');
                 }
-            }
-            
         })
     },[])
 

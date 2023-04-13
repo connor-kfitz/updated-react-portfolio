@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import * as Constants from '../constants/constants';
-import { hover } from '@testing-library/user-event/dist/hover';
 
 export default function About() {
 
-    const [activeAboutLink, setActiveAboutLink] = useState(2);
+    const [activeAboutLink, setActiveAboutLink] = useState(0);
     const [iconHover, setIconHover] = useState([false, -1]);
 
     const active = {
@@ -16,7 +15,6 @@ export default function About() {
     }
 
     function handleHoverEffect(hoverRef) {
-        console.log(hoverRef);
         setIconHover(prev => [!prev[0], hoverRef])
     }
 
