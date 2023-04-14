@@ -485,3 +485,13 @@
         cursor: pointer;
     }
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
