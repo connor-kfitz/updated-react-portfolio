@@ -1,7 +1,7 @@
 export default function Header() {
 
     return (
-        <header className="header" id="header">
+        <header className="header" id="home">
             <div className="header-content">
                 <div className="header-content__title-prefix">Nice to meet you,</div>
                 <h1 className="header-content__title">I'm Connor Fitzsimmons</h1>

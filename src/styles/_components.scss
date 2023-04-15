@@ -23,17 +23,13 @@
     }
 
     &__item {
+        text-decoration: none;
+        position: relative;
 
         &:not(:last-child) {
             margin-right: 2rem;
         }
-
-        &:hover {
-            color: $link-text-colour;
-            text-decoration: underline;
-            text-underline-offset: 1.5rem;
-            text-decoration-thickness: .2rem;
-        }
+        
     }
 
     &__link:link,
@@ -42,6 +38,19 @@
         font-size: 1.8rem;
         font-weight: 700;
         text-decoration: none;
+        transition: .5s;
+    }
+
+    &__animation {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1rem;
+        width: 100%;
+        height: .3rem;
+        background-color: $link-text-colour; 
+        transform: scaleX(0);
+        transition: transform 0.5s;
     }
 
     &__social-box {

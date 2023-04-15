@@ -10,7 +10,7 @@ export default function Projects() {
     }
 
     return (
-        <section className="projects">
+        <section className="projects" id="projects">
             <div className="projects-content">
                 <h2 className="projects-content__header">Projects</h2>
                 <div className="projects-content__text">Have a look at some of my projects listed below...</div>
