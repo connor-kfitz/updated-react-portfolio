@@ -1,6 +1,7 @@
 import GithubIcon from '../images/github-icon.svg';
-import GmailIcon from '../images/gmail-icon.svg';
 import LinkedinIcon from '../images/linkedin-icon.svg';
+import GitHubColourIcon from '../images/github-colour-icon.svg';
+import LinkedinColourIcon from '../images/linkedin-colour-icon.svg'
 
 import ReactIcon from '../images/icons/react-icon.svg';
 import AngularIcon from '../images/icons/angular-icon.svg';
@@ -54,21 +55,15 @@ export const navLinks = [
 export const socialLinks = [
     {
         name: 'Github',
-        reference: '',
+        reference: 'https://github.com/connor-kfitz',
         icon: GithubIcon,
-        // hover: GithubIconHover
-    },
-    {
-        name: 'Gmail',
-        reference: '',
-        icon: GmailIcon,
-        // hover: GmailIconHover
+        hover: GitHubColourIcon
     },
     {
         name: 'Linkedin',
-        reference: '',
+        reference: 'https://www.linkedin.com/in/connor-fitzsimmons/',
         icon: LinkedinIcon,
-        // hover: LinkedinIconHover
+        hover: LinkedinColourIcon
     }
 ]
 
@@ -205,7 +200,6 @@ export const education = [
 
 export {
     GithubIcon,
-    GmailIcon,
     LinkedinIcon,
     ReactIcon,
     AngularIcon,

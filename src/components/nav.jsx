@@ -6,7 +6,8 @@ export default function Nav() {
 
     const [navBackground, setNavBackground] = useState('transparent');
     const [currentView, setCurrentView] = useState([0, true]);
-    const [navLinkHover, setNavLinkHover] = useState(0)
+    const [navLinkHover, setNavLinkHover] = useState(-1)
+    const [socialLinkHover, setSocialLinkHover] = useState(-1);
     const scrollPosition = useRef(-1);
     const direction = useRef(true);
 
@@ -75,8 +76,12 @@ export default function Nav() {
         scrollPosition.current = st <= 0 ? 0 : st;
     }
 
-    function handleHoverEffect(hoverRef) {
-        setNavLinkHover(hoverRef)
+    function handleNavHoverEffect(hoverRef) {
+        setNavLinkHover(hoverRef);
+    }
+
+    function handleSocialHoverEffect(hoverRef) {
+        setSocialLinkHover(hoverRef);
     }
 
     return (
@@ -84,7 +89,7 @@ export default function Nav() {
             <img className="nav__logo" src={Logo} alt="Logo"/>
             <ul className="nav__link-box">
                 {Constants.navLinks.map((link, key) => (
-                    <li className="nav__item" onMouseEnter={() => handleHoverEffect(key)} onMouseLeave={() => handleHoverEffect(-1)}>
+                    <li className="nav__item" onMouseEnter={() => handleNavHoverEffect(key)} onMouseLeave={() => handleNavHoverEffect(-1)}>
                         <a className="nav__link" href={link.reference}
                             style={{color: (key === currentView[0] || (key === navLinkHover)) ? '#fd4766' : '#fff'}}
                         >
@@ -99,10 +104,12 @@ export default function Nav() {
                 ))}
             </ul>
             <ul className="nav__social-box">
-                {Constants.socialLinks.map((item) => (
-                    <li className="nav__item">
-                        <a className="nav__link" href={item.reference}>
-                            <img class="nav__social-icon" src={item.icon} alt={`${item.name} icon`}/>
+                {Constants.socialLinks.map((item, key) => (
+                    <li className="nav__item" onMouseEnter={() => handleSocialHoverEffect(key)} onMouseLeave={() => handleSocialHoverEffect(-1)}>
+                        <a className="nav__link" href={item.reference} target="_blank" rel="noopener noreferrer">
+                            <img class="nav__social-icon" src={(key === socialLinkHover) ? item.hover : item.icon} alt={`${item.name} icon`}
+                            style={{filter: (key === socialLinkHover) ? null : 'invert(100%) sepia(100%) saturate(0%) hue-rotate(52deg) brightness(106%) contrast(101%)'}}
+                            />
                         </a>
                     </li>
                 ))}
