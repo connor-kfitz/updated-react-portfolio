@@ -3,7 +3,7 @@ import * as Constants from '../constants/constants';
 
 export default function About() {
 
-    const [activeAboutLink, setActiveAboutLink] = useState(2);
+    const [activeAboutLink, setActiveAboutLink] = useState(0);
     const [iconHover, setIconHover] = useState([false, -1]);
 
     const active = {
