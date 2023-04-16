@@ -3,10 +3,15 @@
     z-index: 15;
     top: 0;
     display: flex;
+    align-items: center;
     width: 100%;
     background-color: transparent;
     padding: 3rem 4rem;
     transition: .5s ease-in;
+
+    @include respond($mobile-bp) {
+        padding: 1.5rem 3rem
+    }
 
     &__logo {
         object-fit: contain;
@@ -14,12 +19,20 @@
         height: auto;
         margin-right: 4rem;
         filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(234deg) brightness(96%) contrast(107%);
+
+        @include respond($mobile-bp) {
+            display: none;
+        }
     }
 
     &__link-box {
         list-style: none;
         display: flex;
         align-items: center;
+
+        @include respond($mobile-bp) {
+            display: none;
+        }
     }
 
     &__item {
@@ -53,6 +66,21 @@
         transition: transform 0.5s;
     }
 
+    &__mobile-menu {
+        display: none;
+
+        @include respond ($mobile-bp) {
+            display: block;
+            filter: invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%);
+            width: 4rem;
+            margin-top: .2rem;
+        }
+    }
+
+    &__mobile-menu-icon {
+        width: 100%;
+    }
+
     &__social-box {
         list-style: none;
         display: flex;
@@ -66,62 +94,104 @@
 }
 
 .header-content {
-    padding-left: 20.75rem;
-    padding-right: 20.75rem;
-    padding-top: 24vh;
     
     &__title-prefix {
         font-size: 3rem;
         font-weight: 500;
         color: $header-accent-colour;
         margin-bottom: 2rem;
+
+        @include respond($bp-two) {
+            font-size: 2.5rem;
+        }
+
+        @include respond($bp-four) {
+            font-size: 3.5vw;
+        }
     }
 
     &__title {
         font-size: 7.5rem;
         font-weight: 900;
+
+        @include respond($bp-two) {
+            font-size: 6rem;
+        }
+
+        @include respond($bp-four) {
+            font-size: 7vw;
+        }
     }
 
     &__sub-title {
         font-size: 7.5rem;
         font-weight: 900;
         color: $link-text-colour;
+
+        @include respond($bp-two) {
+            font-size: 6rem;
+        }
+
+        @include respond($bp-four) {
+            font-size: 7vw;
+        }
     }
 }
 
 .about-content {
-    // display: flex;
-
-    &__bitmoji {
-        border: solid #757575 .2rem;
-        border-radius: 1rem;
-        margin-right: 7rem;
-    }
-
-    &__box {
-        display: flex;
-        flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__header {
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 2.5rem;
+
+        @include respond($bp-four) {
+            font-size: 3.5rem;
+        }
     }
 
     &__text {
         font-size: 2.2rem;
         color: #757575;
         margin-bottom: 3.5rem;
+
+        @include respond($bp-four) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__box {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__filter-cont {
-        display: flex;
+        display: inline-flex;
         list-style: none;
         background-color: #000b34;
         padding: 1.25rem 1.25rem;
         border-radius: 50em;
         margin-bottom: 4rem;
+
+        @include respond($bp-five) {
+            display: block;
+            overflow: auto;
+            width: 44.2rem;
+            white-space: nowrap;
+        }
+
+        @include respond($bp-six) {
+            width: 29.3rem;
+        }
+    }
+
+    &__filter-cont::-webkit-scrollbar {
+        display: none;
+
     }
 
     &__filter-item {
@@ -129,32 +199,52 @@
         padding: 1.5rem 3rem;
         border-radius: 10rem;
         transition: .2s ease-in;
+        text-align: center;
         cursor: pointer;
+
+        @include respond($bp-five) {
+            display: inline-block;
+            min-width: 33%;
+        }
     }
 }
 
 .front-end {
+    width: 100%;
+
     &__box {
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         flex-wrap: wrap;
-        max-width: 57.2rem;
+        width: 100%;
+        min-height: 20rem;
+        max-height: 20rem;
+        
+
+        @include respond($bp-six) {
+            min-height: auto;
+            max-height: none;
+        }
     }
 
     &__skill {
-        flex: 0 0 48%;
+        width: 48%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
 
         &:not(:last-child) {
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
         }
 
         &:nth-child(odd) {
             margin-right: 2rem;
+        }
+
+        @include respond($bp-six) {
+            width: 100%;
         }
     }
 
@@ -183,31 +273,38 @@
   }
 
 .back-end {
-    min-height: 18rem;
+    width: 100%;
 
     &__box {
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         flex-wrap: wrap;
-        max-width: 57.2rem;
+        width: 100%;
+        min-height: 20rem;
+        max-height: 20rem;
     }
 
     &__skill {
-        flex: 0 0 48%;
+        width: 49%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
 
-        &:not(:nth-last-child(-n+2)) {
-            margin-bottom: 2rem;
+        &:not(:last-child) {
+            margin-bottom: 1.8rem;
         }
 
         &:nth-child(odd) {
             margin-right: 2rem;
         }
+
+        @include respond($bp-five) {
+            width: 100%;
+        }
     }
+
 
     &__text {
         font-size: 2rem;
@@ -223,6 +320,7 @@
 
 .experience {
     min-height: 18rem;
+    width: 100%;
 
     &__box {
         list-style: none;
@@ -230,12 +328,37 @@
         justify-content: space-between;
         flex-wrap: wrap;
         max-width: 57.2rem;
+
+        @include respond($bp-five) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        @include respond($bp-five) {
+
+            &:not(:last-child) {
+                border-bottom: solid #fff .2rem;
+                padding-bottom: 2rem;
+            }
+        }
     }
 
     &__job-info-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include respond($bp-six) {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 2rem;
+
+
+        }
     }
 
     &__item {
@@ -252,6 +375,10 @@
     &__role {
         margin-bottom: .5rem;
         font-weight: 800;
+
+        @include respond($bp-five) {
+            margin-bottom: 1rem;
+        }
     }
 
     &__company {
@@ -266,6 +393,7 @@
 
 .education {
     min-height: 18rem;
+    width: 100%;
 
     &__box {
         list-style: none;
@@ -273,23 +401,48 @@
         justify-content: space-between;
         flex-wrap: wrap;
         max-width: 57.2rem;
+        width: 100%;
+
+        @include respond($bp-five) {
+            display: block;
+        }
     }
 
     &__item {
         flex: 0 0 100%;
         font-size: 1.7rem;
         margin-bottom: 2rem;
+
+        @include respond($bp-five) {
+            flex: none;
+            width: 100%;
+
+            &:not(:last-child) {
+                border-bottom: solid #fff .2rem;
+                padding-bottom: 2rem;
+            }
+        }
     }
 
     &__info-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include respond($bp-five) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
     }
 
     &__title {
         margin-bottom: .5rem;
         font-weight: 800;
+
+        @include respond($bp-five) {
+            margin-bottom: 1rem;
+        }
     }
 
     &__school-info-box {
@@ -317,12 +470,20 @@
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 2.5rem;
+
+        @include respond($bp-four) {
+            font-size: 3.5rem;
+        }
     }
 
     &__text {
         font-size: 2.2rem;
         color: #757575;
         margin-bottom: 8rem;
+
+        @include respond($bp-four) {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -334,14 +495,24 @@
     grid-column-gap: 5rem;
     grid-row-gap: 5rem;
 
+    @include respond($bp-one) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond ($bp-three) {
+        grid-column-gap: 4rem;
+        grid-row-gap: 4rem;
+        width: 100%;
+    }
+
     &__item-box {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        width: 390px;
-        height: 530px;
+        width: 39rem;
+        height: 53rem;
         padding: 0 1.5rem;
         border-radius: 1rem;
         cursor: pointer;
@@ -350,6 +521,12 @@
         background-position: 50% 0;
         background-size: 100%;
         transition: .5s ease-out;
+
+        @include respond ($bp-three) {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1.35;
+        }
 
         &:hover {
             background-position: 50% -1rem;
@@ -376,6 +553,11 @@
         font-weight: 800;
         text-align: center;
         margin-bottom: 1rem;
+
+        @include respond($mobile-bp) {
+            font-size: clamp(2rem, 4.2vw, 3rem);
+            margin-bottom: 8vw;
+        }
     }
 
     &__description {
@@ -385,6 +567,10 @@
         text-align: center;
         opacity: 0;
         min-height: 5.8rem;
+
+        @include respond($mobile-bp) {
+            display: none;
+        }
     }
 
     &__background-gradient {
@@ -420,12 +606,19 @@
     width: 65rem;
     margin-left: auto;
     margin-right: auto;
-    // background-color: orangered;
+
+    @include respond($bp-four) {
+        width: 100%;
+    }
 
     &__header {
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 2.5rem;
+
+        @include respond($bp-four) {
+            font-size: 3.5rem;
+        }
     }
 
     &__phone-number {
@@ -433,11 +626,19 @@
         margin-right: auto;
         color: #757575;
         margin-bottom: .5rem;
+
+        @include respond($bp-four) {
+            font-size: 1.6rem;
+        }
     }
 
     &__phone-number-text {
         font-size: 2rem;
         font-weight: 600;
+
+        @include respond($bp-four) {
+            font-size: 1.6rem;
+        }
     }
 
     &__email {
@@ -445,11 +646,19 @@
         margin-right: auto;
         color: #757575;
         margin-bottom: 5rem;
+
+        @include respond($bp-four) {
+            font-size: 1.6rem;
+        }
     }
 
     &__email-text {
         font-size: 2rem;
         font-weight: 700;
+
+        @include respond($bp-four) {
+            font-size: 1.6rem;
+        }
     }
 
 

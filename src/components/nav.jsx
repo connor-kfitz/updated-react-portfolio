@@ -1,5 +1,6 @@
 import * as Constants from '../constants/constants';
 import Logo from '../images/PortfolioLogo.png';
+import mobileMenu from '../images/menu-icon.png';
 import { useEffect, useState, useRef } from 'react';
 
 export default function Nav() {
@@ -103,6 +104,9 @@ export default function Nav() {
                     </li>
                 ))}
             </ul>
+            <div className="nav__mobile-menu">
+                <img className="nav__mobile-menu-icon" src={mobileMenu}/>
+            </div>
             <ul className="nav__social-box">
                 {Constants.socialLinks.map((item, key) => (
                     <li className="nav__item" onMouseEnter={() => handleSocialHoverEffect(key)} onMouseLeave={() => handleSocialHoverEffect(-1)}>

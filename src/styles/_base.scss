@@ -1,3 +1,4 @@
+// Colours
 $text-primary-colour: #fff;
 $text-secondary-colour: 'blue';
 $link-text-colour: #fd4766;
@@ -5,10 +6,16 @@ $header-accent-colour: #75758F;
 
 $background-primary-colour: rgb(0, 6, 15);
 $background-secondary-colour: #010a18;
-
-// $background-secondary-colour: #000726;
 $background-tertiary-colour: '';
 
+// Media Query Breakpoints
+$bp-one: 86.75em;
+$bp-two: 81.5em;
+$bp-three: 60.625em;
+$mobile-bp: 56.25em;
+$bp-four: 48.75em;
+$bp-five: 40.625em;
+$bp-six: 32.813em;
 
 * {
     margin: 0;
