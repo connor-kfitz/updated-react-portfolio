@@ -38,6 +38,7 @@
     &__item {
         text-decoration: none;
         position: relative;
+        z-index: 30;
 
         &:not(:last-child) {
             margin-right: 2rem;
@@ -71,6 +72,8 @@
 
         @include respond ($mobile-bp) {
             display: block;
+            position: relative;
+            z-index: 30;
             filter: invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%);
             width: 4rem;
             margin-top: .2rem;
@@ -79,6 +82,86 @@
 
     &__mobile-menu-icon {
         width: 100%;
+    }
+
+    &__mobile-menu-overlay {
+        position: absolute;
+        z-index: 10;
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        padding-top: 7.7rem;
+        background-color: rgba(0, 6, 15, 0.5);
+        touch-action: none;
+    }
+
+    .mobile-menu-overlay-enter {
+        background-color: transparent;
+
+        .nav__mobile-link-box {
+            background-color: transparent;
+            color: transparent;
+            border-top: solid transparent 1px;
+        }
+    }
+    
+    .mobile-menu-overlay-enter-active {
+        background-color: rgba(0, 6, 15, 0.5);
+        transition: .5s ease-in;
+
+        .nav__mobile-link-box {
+            background-color: $background-primary-colour;
+            color: #fff;
+            border-top: solid #fff 1px;
+            transition: .5s ease-in;
+        }
+    }
+    
+    .mobile-menu-overlay-exit {
+        background-color: rgba(0, 6, 15, 0.5);
+
+        .nav__mobile-link-box {
+            background-color: $background-primary-colour;
+            color: #fff;
+            border-top: solid #fff 1px;
+        }
+    }
+    
+    .mobile-menu-overlay-exit-active {
+        background-color: transparent;
+        transition: .5s ease-in;
+
+        .nav__mobile-link-box {
+            background-color: transparent;
+            color: transparent;
+            border-top: solid transparent 1px;
+            transition: .5s ease-in;
+        }
+    }
+
+    &__mobile-link-box {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        border-top: solid #fff 1px;
+        background-color: $background-primary-colour;
+    }
+
+    &__mobile-item {
+        text-decoration: none;
+        padding: 1.5rem 3.2rem;        
+    }
+
+    &__mobile-link:link,
+    &__mobile-link:visited {
+        color: inherit;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-decoration: none;
     }
 
     &__social-box {
@@ -94,6 +177,7 @@
 }
 
 .header-content {
+    position: relative;
     
     &__title-prefix {
         font-size: 3rem;
@@ -106,7 +190,7 @@
         }
 
         @include respond($bp-four) {
-            font-size: 3.5vw;
+            font-size: 1.8rem;
         }
     }
 
@@ -119,7 +203,7 @@
         }
 
         @include respond($bp-four) {
-            font-size: 7vw;
+            font-size: 3.5rem;
         }
     }
 
@@ -133,7 +217,7 @@
         }
 
         @include respond($bp-four) {
-            font-size: 7vw;
+            font-size: 3.5rem;
         }
     }
 }
@@ -198,7 +282,7 @@
         font-weight: 800;
         padding: 1.5rem 3rem;
         border-radius: 10rem;
-        transition: .2s ease-in;
+        transition: .5s ease-in;
         text-align: center;
         cursor: pointer;
 

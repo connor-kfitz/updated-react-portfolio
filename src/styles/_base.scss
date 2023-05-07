@@ -5,7 +5,15 @@ $link-text-colour: #fd4766;
 $header-accent-colour: #75758F;
 
 $background-primary-colour: rgb(0, 6, 15);
-$background-secondary-colour: #010a18;
+// $background-primary-colour: #207fad;
+
+// $background-secondary-colour: #010a18f3;
+// $background-secondary-colour: #010a18fb;
+$background-secondary-colour: rgba(0, 6, 15, 0.96);
+// $background-secondary-colour: rgba(0, 6, 15, 1);
+
+
+
 $background-tertiary-colour: '';
 
 // Media Query Breakpoints
@@ -31,6 +39,7 @@ $bp-six: 32.813em;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
