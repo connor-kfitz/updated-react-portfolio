@@ -9,10 +9,6 @@
     padding: 3rem 4rem;
     transition: .5s ease-in;
 
-    @include respond($mobile-bp) {
-        padding: 1.5rem 3rem
-    }
-
     &__logo {
         object-fit: contain;
         width: 13rem;
@@ -91,7 +87,7 @@
         width: 100vw;
         left: 0;
         top: 0;
-        padding-top: 7.7rem;
+        padding-top: 10.9rem;
         background-color: rgba(0, 6, 15, 0.5);
         touch-action: none;
     }
@@ -153,13 +149,13 @@
 
     &__mobile-item {
         text-decoration: none;
-        padding: 1.5rem 3.2rem;        
+        padding: 2.25rem 4.3rem;   
     }
 
     &__mobile-link:link,
     &__mobile-link:visited {
         color: inherit;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         font-weight: 700;
         text-decoration: none;
     }
@@ -185,12 +181,8 @@
         color: $header-accent-colour;
         margin-bottom: 2rem;
 
-        @include respond($bp-two) {
+        @include respond ($bp-three) {
             font-size: 2.5rem;
-        }
-
-        @include respond($bp-four) {
-            font-size: 1.8rem;
         }
     }
 
@@ -198,12 +190,8 @@
         font-size: 7.5rem;
         font-weight: 900;
 
-        @include respond($bp-two) {
-            font-size: 6rem;
-        }
-
-        @include respond($bp-four) {
-            font-size: 3.5rem;
+        @include respond ($bp-three) {
+            font-size: 5.4rem;
         }
     }
 
@@ -212,12 +200,8 @@
         font-weight: 900;
         color: $link-text-colour;
 
-        @include respond($bp-two) {
-            font-size: 6rem;
-        }
-
-        @include respond($bp-four) {
-            font-size: 3.5rem;
+        @include respond ($bp-three) {
+            font-size: 5.4rem;
         }
     }
 }
@@ -231,20 +215,12 @@
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 2.5rem;
-
-        @include respond($bp-four) {
-            font-size: 3.5rem;
-        }
     }
 
     &__text {
         font-size: 2.2rem;
         color: #757575;
         margin-bottom: 3.5rem;
-
-        @include respond($bp-four) {
-            font-size: 1.8rem;
-        }
     }
 
     &__box {
@@ -260,17 +236,6 @@
         padding: 1.25rem 1.25rem;
         border-radius: 50em;
         margin-bottom: 4rem;
-
-        @include respond($bp-five) {
-            display: block;
-            overflow: auto;
-            width: 44.2rem;
-            white-space: nowrap;
-        }
-
-        @include respond($bp-six) {
-            width: 29.3rem;
-        }
     }
 
     &__filter-cont::-webkit-scrollbar {
@@ -285,11 +250,6 @@
         transition: .5s ease-in;
         text-align: center;
         cursor: pointer;
-
-        @include respond($bp-five) {
-            display: inline-block;
-            min-width: 33%;
-        }
     }
 }
 
@@ -304,12 +264,6 @@
         width: 100%;
         min-height: 20rem;
         max-height: 20rem;
-        
-
-        @include respond($bp-six) {
-            min-height: auto;
-            max-height: none;
-        }
     }
 
     &__skill {
@@ -325,10 +279,6 @@
 
         &:nth-child(odd) {
             margin-right: 2rem;
-        }
-
-        @include respond($bp-six) {
-            width: 100%;
         }
     }
 
@@ -365,8 +315,9 @@
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
-        min-height: 20rem;
-        max-height: 20rem;
+        min-height: 10rem;
+        max-height: 10rem;
+        margin-bottom: 10rem;
     }
 
     &__skill {
@@ -382,10 +333,6 @@
 
         &:nth-child(odd) {
             margin-right: 2rem;
-        }
-
-        @include respond($bp-five) {
-            width: 100%;
         }
     }
 
@@ -403,8 +350,8 @@
 }
 
 .experience {
-    min-height: 18rem;
     width: 100%;
+    min-height: 20rem;
 
     &__box {
         list-style: none;
@@ -412,37 +359,12 @@
         justify-content: space-between;
         flex-wrap: wrap;
         max-width: 57.2rem;
-
-        @include respond($bp-five) {
-            flex-direction: column;
-            flex-wrap: nowrap;
-            width: 100%;
-        }
-    }
-
-    &__item {
-        @include respond($bp-five) {
-
-            &:not(:last-child) {
-                border-bottom: solid #fff .2rem;
-                padding-bottom: 2rem;
-            }
-        }
     }
 
     &__job-info-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @include respond($bp-six) {
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-            margin-bottom: 2rem;
-
-
-        }
     }
 
     &__item {
@@ -459,10 +381,6 @@
     &__role {
         margin-bottom: .5rem;
         font-weight: 800;
-
-        @include respond($bp-five) {
-            margin-bottom: 1rem;
-        }
     }
 
     &__company {
@@ -476,8 +394,8 @@
 }
 
 .education {
-    min-height: 18rem;
     width: 100%;
+    min-height: 20rem;
 
     &__box {
         list-style: none;
@@ -486,47 +404,23 @@
         flex-wrap: wrap;
         max-width: 57.2rem;
         width: 100%;
-
-        @include respond($bp-five) {
-            display: block;
-        }
     }
 
     &__item {
         flex: 0 0 100%;
         font-size: 1.7rem;
         margin-bottom: 2rem;
-
-        @include respond($bp-five) {
-            flex: none;
-            width: 100%;
-
-            &:not(:last-child) {
-                border-bottom: solid #fff .2rem;
-                padding-bottom: 2rem;
-            }
-        }
     }
 
     &__info-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @include respond($bp-five) {
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
     }
 
     &__title {
         margin-bottom: .5rem;
         font-weight: 800;
-
-        @include respond($bp-five) {
-            margin-bottom: 1rem;
-        }
     }
 
     &__school-info-box {
@@ -554,20 +448,12 @@
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 2.5rem;
-
-        @include respond($bp-four) {
-            font-size: 3.5rem;
-        }
     }
 
     &__text {
         font-size: 2.2rem;
         color: #757575;
         margin-bottom: 8rem;
-
-        @include respond($bp-four) {
-            font-size: 1.8rem;
-        }
     }
 }
 
@@ -583,20 +469,8 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include respond ($bp-three) {
-        grid-column-gap: 4rem;
-        grid-row-gap: 4rem;
-        width: 100%;
-    }
-
-    @include respond ($bp-four) {
-        grid-template-columns: repeat(1, 1fr);
-        width: 80%;
-        grid-row-gap: 5rem;
-    }
-
     @include respond ($bp-five) {
-        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     &__item-box {
@@ -616,14 +490,10 @@
         background-size: 100%;
         transition: .5s ease-out;
 
-        @include respond ($bp-three) {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1.35;
-        }
-
-        @include respond ($bp-four) {
+        @include respond ($bp-five) {
             aspect-ratio: 1 / 1.2;
+            width: 55rem;
+            height: auto;
         }
 
         &:hover {
@@ -645,12 +515,8 @@
         font-size: 2rem;
         color: #D3D3D3;
 
-        @include respond($bp-four) {
-            font-size: 4vw
-        }
-
         @include respond($bp-five) {
-            font-size: clamp(1.6rem, 5vw, 8rem)
+            font-size: 2.6rem
         }
     }
 
@@ -660,17 +526,8 @@
         text-align: center;
         margin-bottom: 1rem;
 
-        @include respond($mobile-bp) {
-            font-size: clamp(3rem, 4.2vw, 3rem);
-            margin-bottom: 8vw;
-        }
-
-        @include respond ($bp-four) {
-            font-size: clamp(3rem, 6vw, 8rem)
-        }
-
         @include respond ($bp-five) {
-            font-size: clamp(3rem, 8vw, 8rem)
+            font-size: 5rem;
         }
     }
 
@@ -681,10 +538,6 @@
         text-align: center;
         opacity: 0;
         min-height: 5.8rem;
-
-        @include respond($mobile-bp) {
-            display: none;
-        }
     }
 
     &__background-gradient {
@@ -729,10 +582,6 @@
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 2.5rem;
-
-        @include respond($bp-four) {
-            font-size: 3.5rem;
-        }
     }
 
     &__phone-number {
@@ -740,19 +589,11 @@
         margin-right: auto;
         color: #757575;
         margin-bottom: .5rem;
-
-        @include respond($bp-four) {
-            font-size: 1.6rem;
-        }
     }
 
     &__phone-number-text {
         font-size: 2rem;
         font-weight: 600;
-
-        @include respond($bp-four) {
-            font-size: 1.6rem;
-        }
     }
 
     &__email {
@@ -760,22 +601,12 @@
         margin-right: auto;
         color: #757575;
         margin-bottom: 5rem;
-
-        @include respond($bp-four) {
-            font-size: 1.6rem;
-        }
     }
 
     &__email-text {
         font-size: 2rem;
         font-weight: 700;
-
-        @include respond($bp-four) {
-            font-size: 1.6rem;
-        }
     }
-
-
 }
 
 .contact-form {

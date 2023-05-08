@@ -27,8 +27,6 @@
 }
 
 .about {
-    // display: flex;
-    // justify-content: center;
     padding: 15rem 4rem;
 
     @include respond($bp-two) {

@@ -5,25 +5,18 @@ $link-text-colour: #fd4766;
 $header-accent-colour: #75758F;
 
 $background-primary-colour: rgb(0, 6, 15);
-// $background-primary-colour: #207fad;
-
-// $background-secondary-colour: #010a18f3;
-// $background-secondary-colour: #010a18fb;
 $background-secondary-colour: rgba(0, 6, 15, 0.96);
-// $background-secondary-colour: rgba(0, 6, 15, 1);
-
-
-
 $background-tertiary-colour: '';
 
 // Media Query Breakpoints
 $bp-one: 86.75em;
 $bp-two: 81.5em;
-$bp-three: 60.625em;
+$bp-three: 63.75em;
 $mobile-bp: 56.25em;
 $bp-four: 48.75em;
-$bp-five: 40.625em;
-$bp-six: 32.813em;
+$bp-five: 46.563em;
+$bp-six: 40.625em;
+$bp-seven: 26.25em;
 
 * {
     margin: 0;
@@ -40,6 +33,18 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    @include respond ($bp-three) {
+        font-size: 50%;
+    }
+
+    @include respond ($bp-six) {
+        font-size: 40%;
+    }
+
+    @include respond ($bp-seven) {
+        font-size: 31%;
+    }
 }
 
 body {
