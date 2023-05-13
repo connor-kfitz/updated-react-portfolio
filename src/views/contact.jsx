@@ -67,6 +67,10 @@ export default function Contact() {
 
     function clearForm() {
         form.current.reset();
+        setName('');
+        setEmail('');
+        setSubject('')
+        setMessage('');
     }
 
     return (

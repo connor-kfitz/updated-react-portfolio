@@ -247,7 +247,7 @@
         cursor: pointer;
 
         &:hover {
-            background-color:  rgb(253, 71, 102);
+            background-color: rgb(253, 71, 102);
         }
 
         &:not(:last-child) {
@@ -514,9 +514,11 @@
             height: auto;
         }
 
-        &:hover {
-            background-position: 50% -1rem;
-            background-size: 103%;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-position: 50% -1rem;
+                background-size: 103%;
+            }
         }
     }
 
@@ -699,9 +701,12 @@
         transition: .1s ease-in;
         cursor: pointer;
 
-        &:hover {
-            scale: 1.1;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                scale: 1.1;
+            }
         }
+        
     }
 }
 
