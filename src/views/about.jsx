@@ -5,31 +5,43 @@ export default function About() {
 
     const [activeAboutLink, setActiveAboutLink] = useState(0);
     const [iconHover, setIconHover] = useState([false, -1]);
+    const [translateInfoBox, setTranslateInfoBox] = useState(0);
 
     const active = {
         backgroundColor: '#fd4766'
     }
 
+    const infoBoxStyle = {
+        transform: `translateX(-${translateInfoBox}px)`
+    }
+
     function handleLinkClick(linkRef) {
-        setActiveAboutLink(linkRef)
+        setActiveAboutLink(linkRef);
+        moveInfoBox(linkRef);
     }
 
     function handleHoverEffect(hoverRef) {
         setIconHover(prev => [!prev[0], hoverRef])
     }
 
+    function moveInfoBox(value) {
+        var blockWidth = document.getElementsByClassName('about-content__info-scrolling-wrapper');
+        setTranslateInfoBox(blockWidth[0].offsetWidth * value);
+    }
+
     return (
         <section className="about" id="about">
             <div className="about-content">
-                    <h2 className="about-content__header">About Me</h2>
-                    <div className="about-content__text">Click on some of the links below...</div>
-                    <div className="about-content__box">
-                        <ul className="about-content__filter-cont">
-                            {Constants.aboutMeOptions.map((item, key) => (
-                                <li className="about-content__filter-item" style={key == activeAboutLink ? active : null} onClick={() => handleLinkClick(key)}>{item.name}</li>
-                            ))}
-                        </ul>
-                        {activeAboutLink == 0 ? (
+                <h2 className="about-content__header">About Me</h2>
+                <div className="about-content__text">Click on some of the links below...</div>
+                <div className="about-content__box">
+                    <ul className="about-content__filter-cont">
+                        {Constants.aboutMeOptions.map((item, key) => (
+                            <li className="about-content__filter-item" style={key == activeAboutLink ? active : null} onClick={() => handleLinkClick(key)}>{item.name}</li>
+                        ))}
+                    </ul>
+                    <div className="about-content__info-scrolling-wrapper">
+                        <div className="about-content__info-box" style={infoBoxStyle}>
                             <section className="front-end">
                                 <ul className="front-end__box">
                                     {Constants.frontEndSkills.map((item, key) => (
@@ -46,8 +58,6 @@ export default function About() {
                                     ))}
                                 </ul>
                             </section>
-                        ) : null}
-                        {activeAboutLink == 1 ? (
                             <section className="back-end">
                                 <ul className="back-end__box">
                                     {Constants.backEndSkills.map((item, key) => (
@@ -63,8 +73,6 @@ export default function About() {
                                     ))}
                                 </ul>
                             </section>
-                        ) : null}
-                        {activeAboutLink == 2 ? (
                             <section className="experience">
                                 <ul className="experience__box">
                                     {Constants.experience.map((item) => (
@@ -82,8 +90,6 @@ export default function About() {
                                     ))}
                                 </ul>
                             </section>
-                        ) : null}
-                        {activeAboutLink == 3 ? (
                             <section className="education">
                                 <ul className="education__box">
                                     {Constants.education.map((item) => (
@@ -100,7 +106,8 @@ export default function About() {
                                     ))}
                                 </ul>
                             </section>
-                        ) : null}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

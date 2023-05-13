@@ -11,7 +11,7 @@ export const projects = [
         type: 'Front-end',
         description: 'Replica of the game 2048, developed in React',
         img: TFEBackrgound,
-        link: '',
+        link: 'https://connor-kfitz.github.io/2048-clone/',
         tags: ['React', 'HTML', 'CSS', 'SCSS', 'Responsive', 'JavaScript', 'Node']
     },
     {
@@ -19,7 +19,7 @@ export const projects = [
         type: 'Font-end',
         description: 'UI for a furniture design company, developed in React',
         img: FDABackground,
-        link: '',
+        link: 'https://connor-kfitz.github.io/furniture-design-application/',
         tags: ['React', 'HTML', 'CSS', 'SCSS', 'Responsive', 'JavaScript', 'Node']
     },
     {
@@ -27,7 +27,7 @@ export const projects = [
         type: 'Font-end',
         description: 'UI for an e-commerce dashboard, developed using JavaScript',
         img: ECDBBackground,
-        link: '',
+        link: 'https://connor-kfitz.github.io/e-commerce-dashboard/',
         tags: ['HTML', 'CSS', 'SCSS', 'Responsive', 'JavaScript', 'Node']
     },
     {
@@ -35,7 +35,7 @@ export const projects = [
         type: 'Back-end',
         description: 'Discord music bot developed using Discord.js',
         img: GSCBackground,
-        link: '',
+        link: 'https://github.com/connor-kfitz/gsc-discord-bot',
         tags: ['Node', 'MongoDB']
     },
     {
@@ -43,7 +43,7 @@ export const projects = [
         type: 'Back-end',
         description: 'Social network API built on a MongoDB database',
         img: SNAPIBackground,
-        link: '',
+        link: 'https://github.com/connor-kfitz/Social-Network-API',
         tags: ['Node', 'MongoDB']
     },
     {
@@ -51,7 +51,7 @@ export const projects = [
         type: 'Full-stack',
         description: 'Job board web application, developed in React',
         img: OJBackground,
-        link: '',
+        link: 'https://github.com/JoelCronin/OddJobs',
         tags: ['React', 'HTML', 'CSS', 'SCSS', 'JavaScript', 'Node', 'MongoDB', 'GraphQL']
     }
 ]
