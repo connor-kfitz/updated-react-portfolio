@@ -9,7 +9,8 @@ export default function About() {
 
     useEffect(() => {
         window.addEventListener('resize', () => {
-            handleLinkClick(0);
+            setActiveAboutLink(0);
+            moveInfoBox(0);
         })
     },[])
 
@@ -43,7 +44,7 @@ export default function About() {
                 <div className="about-content__box">
                     <ul className="about-content__filter-cont">
                         {Constants.aboutMeOptions.map((item, key) => (
-                            <li className="about-content__filter-item" style={key == activeAboutLink ? active : null} onClick={() => handleLinkClick(key)}>{item.name}</li>
+                            <li className="about-content__filter-item" style={key === activeAboutLink ? active : null} onClick={() => handleLinkClick(key)}>{item.name}</li>
                         ))}
                     </ul>
                     <div className="about-content__info-scrolling-wrapper">
@@ -52,12 +53,12 @@ export default function About() {
                                 <ul className="front-end__box">
                                     {Constants.frontEndSkills.map((item, key) => (
                                         <li className="front-end__skill" onMouseEnter={()=>handleHoverEffect(key)} onMouseLeave={()=>handleHoverEffect(key)}>
-                                            <div className="front-end__text" style={{'color': (iconHover[0] && iconHover[1] == key) ? item.color : '#fff'}}>{item.name}</div>
+                                            <div className="front-end__text" style={{'color': (iconHover[0] && iconHover[1] === key) ? item.color : '#fff'}}>{item.name}</div>
                                             <img className="front-end__icon" 
-                                                src={(iconHover[0] && iconHover[1] == key) ? item.iconHover : item.icon} 
-                                                style={{'filter': (iconHover[0] && iconHover[1] == key) ? 'none' : 'invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%)',
-                                                        'transform': (iconHover[0] && iconHover[1] == key) ? `translateY(-.5rem) scale(${item.hoverScale})` : 'translateY(0)',
-                                                        'animation-name': (iconHover[0] && iconHover[1] == key && key == 0) ? 'rotate' : 'none'
+                                                src={(iconHover[0] && iconHover[1] === key) ? item.iconHover : item.icon} alt={item.name}
+                                                style={{'filter': (iconHover[0] && iconHover[1] === key) ? 'none' : 'invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%)',
+                                                        'transform': (iconHover[0] && iconHover[1] === key) ? `translateY(-.5rem) scale(${item.hoverScale})` : 'translateY(0)',
+                                                        'animation-name': (iconHover[0] && iconHover[1] === key && key === 0) ? 'rotate' : 'none'
                                                         }}
                                             />
                                         </li>
@@ -68,11 +69,11 @@ export default function About() {
                                 <ul className="back-end__box">
                                     {Constants.backEndSkills.map((item, key) => (
                                         <li className="back-end__skill" onMouseEnter={()=>handleHoverEffect(key)} onMouseLeave={()=>handleHoverEffect(key)}>
-                                            <div className="back-end__text" style={{'color': (iconHover[0] && iconHover[1] == key) ? item.color : '#fff'}}>{item.name}</div>
+                                            <div className="back-end__text" style={{'color': (iconHover[0] && iconHover[1] === key) ? item.color : '#fff'}}>{item.name}</div>
                                             <img className="back-end__icon" 
-                                                src={(iconHover[0] && iconHover[1] == key) ? item.iconHover : item.icon} 
-                                                style={{'filter': (iconHover[0] && iconHover[1] == key) ? (key == 2 ? 'auto' : 'none') : 'invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%)',
-                                                        'transform': (iconHover[0] && iconHover[1] == key) ? `translateY(-.5rem) scale(${item.hoverScale})` : 'translateY(0)',
+                                                src={(iconHover[0] && iconHover[1] === key) ? item.iconHover : item.icon} alt={item.name}
+                                                style={{'filter': (iconHover[0] && iconHover[1] === key) ? (key === 2 ? 'auto' : 'none') : 'invert(97%) sepia(99%) saturate(0%) hue-rotate(293deg) brightness(115%) contrast(100%)',
+                                                        'transform': (iconHover[0] && iconHover[1] === key) ? `translateY(-.5rem) scale(${item.hoverScale})` : 'translateY(0)',
                                                         }}
                                             />
                                         </li>
@@ -88,7 +89,7 @@ export default function About() {
                                                 <div className="experience__job-title-box">
                                                     <div className="experience__company">{item.company}</div>
                                                     <img className="experience__icon" src={item.icon}
-                                                        style={{filter: item.filter}}/>    
+                                                         alt={item.name}  style={{filter: item.filter}}/>    
                                                 </div>
                                             </div>
                                             <div className="experience__date">{item.date}</div>
@@ -104,7 +105,7 @@ export default function About() {
                                                 <div className="education__title">{item.degree}</div>
                                                 <div className="education__school-info-box">
                                                     <div className="education__school">{item.school}</div>
-                                                    <img className="education__icon" src={item.icon}/>
+                                                    <img className="education__icon" src={item.icon} alt={item.name}/>
                                                 </div>
                                             </div>
                                             <div className="education__date">{item.gradDate}</div>
