@@ -25,7 +25,7 @@ export const projects = [
     {
         name: 'E-Commerce Dashboard',
         type: 'Font-end',
-        description: 'UI for an e-commerce dashboard, developed using JavaScript',
+        description: 'UI for an e-commerce dashboard, developed using HTML & SCSS',
         img: ECDBBackground,
         link: 'https://connor-kfitz.github.io/e-commerce-dashboard/',
         tags: ['HTML', 'CSS', 'SCSS', 'Responsive', 'JavaScript', 'Node']
