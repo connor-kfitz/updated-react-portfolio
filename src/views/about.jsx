@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as Constants from '../constants/constants';
 
 export default function About() {
@@ -6,6 +6,12 @@ export default function About() {
     const [activeAboutLink, setActiveAboutLink] = useState(0);
     const [iconHover, setIconHover] = useState([false, -1]);
     const [translateInfoBox, setTranslateInfoBox] = useState(0);
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            handleLinkClick(0);
+        })
+    },[])
 
     const active = {
         backgroundColor: '#fd4766'
