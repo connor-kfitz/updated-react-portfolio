@@ -227,6 +227,7 @@
         display: inline-flex;
         flex-direction: column;
         align-items: center;
+        max-width: 100%;
     }
 
     &__filter-cont {
@@ -239,6 +240,9 @@
     }
 
     &__filter-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-weight: 800;
         padding: 1.5rem 3rem;
         border-radius: 10rem;
@@ -255,6 +259,10 @@
         &:not(:last-child) {
             margin-right: .5rem;
         }
+
+        @include respond($bp-six) {
+            font-weight: 500;
+        }
     }
 
     &__info-scrolling-wrapper {
@@ -262,6 +270,7 @@
         width: 59.2rem;
         height: 20rem;
         overflow: hidden;
+        max-width: 100%;
     }
 
     &__info-box {
@@ -269,7 +278,7 @@
         top: 0;
         left: 0;
         display: flex;
-        max-width: 59.2rem;
+        max-width: 100%;
         transition: .4s ease-in;
         padding-top: 2rem;
     }
@@ -488,6 +497,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5rem;
     grid-row-gap: 5rem;
+    max-width: 100%;
 
     @include respond($bp-one) {
         grid-template-columns: repeat(2, 1fr);
@@ -512,7 +522,8 @@
 
         @include respond ($bp-five) {
             aspect-ratio: 1 / 1.2;
-            width: 55rem;
+            width: 100%;
+            max-width: 100%;
             height: auto;
         }
 

@@ -60,7 +60,7 @@ export default function Nav() {
         views.map((view) => {
             let domElement = document.getElementById(view);
             verticalOffsets.push(domElement.offsetTop);
-        })
+        });
 
         return verticalOffsets;
     }

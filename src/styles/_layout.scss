@@ -32,7 +32,11 @@
     @include respond($bp-two) {
         padding-top: 12.5rem;
         padding-bottom: 6.25rem;
+    }
 
+    @include respond($bp-six) {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -44,6 +48,10 @@
         padding-bottom: 6.25rem;
     }
 
+    @include respond($bp-six) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 
 }
 
@@ -53,6 +61,11 @@
     @include respond($bp-two) {
         padding-top: 12.5rem;
         padding-bottom: 12.5rem;
+    }
+
+    @include respond($bp-six) {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
