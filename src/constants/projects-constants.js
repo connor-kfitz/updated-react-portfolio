@@ -16,7 +16,7 @@ export const projects = [
     },
     {
         name: 'Furniture Design Application',
-        type: 'Font-end',
+        type: 'Front-end',
         description: 'UI for a furniture design company, developed in React',
         img: FDABackground,
         link: 'https://connor-kfitz.github.io/furniture-design-application/',
@@ -24,7 +24,7 @@ export const projects = [
     },
     {
         name: 'E-Commerce Dashboard',
-        type: 'Font-end',
+        type: 'Front-end',
         description: 'UI for an e-commerce dashboard, developed using HTML & SCSS',
         img: ECDBBackground,
         link: 'https://connor-kfitz.github.io/e-commerce-dashboard/',
