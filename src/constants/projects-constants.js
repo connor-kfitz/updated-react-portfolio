@@ -32,7 +32,7 @@ export const projects = [
     },
     {
         name: 'GSC Discord Bot',
-        type: 'Back-end',
+        type: 'Bot',
         description: 'Discord music bot developed using Discord.js',
         img: GSCBackground,
         link: 'https://github.com/connor-kfitz/gsc-discord-bot',
